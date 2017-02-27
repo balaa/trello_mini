@@ -10,7 +10,7 @@ model_serializers = {"board": "BoardSerializer", "list": "ListSerializer", "card
 
 def get_model_details(path):
     path = path.split('/')
-    model_key = path[3].split('_')
+    model_key = path[4].split('_')
     if model_key[0] in model_serializers:
         return model_key[0].capitalize(), model_serializers[model_key[0]]
     else:
